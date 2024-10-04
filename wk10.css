@@ -1,0 +1,32 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;  /* Stack the elements vertically */
+    justify-content: flex-start;  /* Align content at the top */
+    align-items: center;  /* Center content horizontally */
+    overflow-x: hidden;   /* Disable horizontal scrolling */
+    overflow-y: auto;     /* Enable vertical scrolling */
+}
+
+/* Styles for vis1 */
+#vis1 {
+    width: 100%;
+    max-width: 2000px;  /* Set a reasonable width for vis1 */
+    height: auto;
+    margin-bottom: 50px;  /* Space below vis1 */
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+}
+
+/* Styles for vis2 */
+#vis2 {
+    width: 100%;
+    max-width: 2000px;  /* Set a reasonable width for vis2 */
+    height: auto;
+    margin-bottom: 100px;  /* Space below vis2 */
+    display: flex;
+    justify-content: center;  /* Center the content horizontally */
+}
