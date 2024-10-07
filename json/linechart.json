@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/(2015-2018)%20complain%20report.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "axis": {"title": "Year"}
+    },
+    "y": {
+      "field": "Total",
+      "type": "quantitative",
+      "axis": {"title": "Number of Complaints"}
+    },
+    "color": {
+      "field": "Public Transport Complaints",
+      "type": "nominal",
+      "legend": {"title": "Complaint Categories"}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "Public Transport Complaints", "type": "nominal", "title": "Complaint Category"},
+      {"field": "Total", "type": "quantitative", "title": "Number of Complaints"}
+    ]
+  },
+  "width": "container",
+  "height": 400,
+  "title": "Trends in Public Transport Complaints by Categories (2016-2018)"
+}
