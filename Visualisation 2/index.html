@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Transports in Eastern Australia</title>
+    
+    <!-- Vega and Vega-Lite Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Wrapper for all content to ensure proper scrolling -->
+    <div id="content-wrapper">
+        <h1>Public Transports in Eastern Australia</h1>
+
+        <!-- Container for Map Visualization and Storytelling -->
+        <div id="map-container">
+            <!-- First Visualization (Map) -->
+            <div id="vis1"></div>
+
+            <!-- Storytelling Section -->
+            <div id="story">
+                <h2>Public Transport Facilities</h2>
+                <p>
+                    The public transport map provides insights into the availability of short platform facilities across different regions in Eastern Australia. 
+                    The color-coded markers show where these facilities are present, helping to identify areas with better accessibility.
+                </p>
+                <p>
+                    This visualization allows users to explore the locations and their respective transport modes. The story behind these facilities is important for understanding 
+                    accessibility improvements and the regional spread of services.
+                </p>
+                <h2>Insights</h2>
+                <p>
+                    The public transport map provides insights into the availability of short platform facilities across different regions in Eastern Australia. 
+                    The color-coded markers show where these facilities are present, helping to identify areas with better accessibility.
+                </p>
+            </div>
+        </div>
+
+        <!-- Container for Bar Chart Visualization and Storytelling -->
+        <div id="vis2-container">
+            <!-- Container for two storytelling sections side by side -->
+            <div id="barchart-story-wrapper">
+                <!-- Storytelling Section 1 (Left) -->
+                <div class="barchart-story-part" id="barchart-story-left">
+                    <h2>Highest</h2>
+                    <p>
+                        The first part of the story provides an overview of public transport usage trends in Eastern Australia. It highlights the importance of understanding seasonal patterns
+                        and the effect of holidays or external events on ridership.
+                    </p>
+                </div>
+
+                <!-- Storytelling Section 2 (Right) -->
+                <div class="barchart-story-part" id="barchart-story-right">
+                    <h2>Lowest</h2>
+                    <p>
+                        The second part focuses on yearly comparisons and helps to identify which transport modes are most used in different months, providing insights
+                        on how public preferences and infrastructure changes affect usage patterns over time.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Second Visualization (Bar Chart) -->
+            <div id="vis2"></div>
+        </div>
+
+        <!-- Container for Area Chart Visualization and Storytelling -->
+        <div id="vis3-container">
+            <!-- Updated Area Chart Visualization (aligned to the left) -->
+            <div id="vis3"></div>
+
+            <!-- Container for the storytelling sections on the right -->
+            <div id="areachart-story-container">
+                <!-- Storytelling section 1 (top) -->
+                <div id="areachart-story">
+                    <h2>Insights</h2>
+                    <p>
+                        This section analyzes the trends in public transport complaints over the years, focusing on identifying key growth patterns and areas where concerns are 
+                        concentrated. By looking at fluctuations in complaint numbers, we can determine the specific issues causing dissatisfaction, such as delays, overcrowding, 
+                        or inadequate services. Understanding these patterns helps highlight where improvements in service, communication, or infrastructure might be needed to 
+                        address customer concerns and enhance overall service quality.
+                    </p>
+                </div>
+                
+                <!-- Storytelling section 2 (bottom) -->
+                <div id="areachart-story-bottom">
+                    <h2>Future Directions</h2>
+                    <p>
+                        This section examines the potential future of public transport services by using historical complaint data to anticipate emerging trends. The analysis 
+                        highlights which areas of public transport are likely to need further attention, such as infrastructure upgrades or service expansions. By addressing 
+                        recurring issues, policymakers and service providers can plan targeted strategies for improvement. This approach aims to ensure the sustainable development 
+                        of public transport services, with a focus on better user experience and operational efficiency in the long term.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                <!-- Attribution and Links Container -->
+        <div id="attribution-container">
+            <p>Visualization created by Sum Yin Aw</p>
+            <p>Data sources:</p>
+            <ul>
+                <li><a href="https://data.gov.au/dataset/ds-nsw-e855f983-bdb4-4113-ad97-7f56764e6ebd/details?q=public%20transport" target="_blank">Public Transport - Location Facilities and Operators</a></li>
+                <li><a href="https://data.gov.au/dataset/ds-sa-6619f06c-432e-40b1-8e16-fe22e8c15860/details?q=public%20transport" target="_blank">Public complaints received by the Department of Infrastructure and Transport</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Load the first visualization (Map)
+        vegaEmbed("#vis1", "json/map.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+
+        // Load the second visualization (Bar Chart)
+        vegaEmbed("#vis2", "json/barchart.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+
+        // Load the third visualization (Area Chart)
+        vegaEmbed("#vis3", "json/areachart.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+    </script>
+</body>
+</html>
