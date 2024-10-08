@@ -4,7 +4,7 @@
   "height": 500,
   "title": "Monthly Public Transport Patronage for Regional Modes",
   "data": {
-    "url": "https://raw.githubusercontent.com/AwSumYin/homeworkassessmentwk10/refs/heads/main/Monthly%20public%20transport%20patronage%20by%20mode_21082024.csv",
+    "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/Monthly%20public%20transport%20patronage%20by%20mode_21082024.csv",
     "format": {"type": "csv"}
   },
   "params": [
