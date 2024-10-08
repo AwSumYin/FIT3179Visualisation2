@@ -6,7 +6,7 @@ Year,Public Transport Complaints,Total
 2016,Punctuality,2218
 2016,Service access/processes/procedures,40
 2016,Service changes and service quality,6141
-2016,Service quality/delivery,207
+2016,Service delivery,207
 2016,Taxi and small passenger vehicle services,375
 2017,Behaviour of staff,72
 2017,Fares and ticketing,737
@@ -15,7 +15,7 @@ Year,Public Transport Complaints,Total
 2017,Punctuality,2409
 2017,Service access/processes/procedures,73
 2017,Service changes and service quality,5508
-2017,Service quality/delivery,547
+2017,Service delivery,547
 2017,Taxi and small passenger vehicle services,318
 2018,Behaviour of staff,78
 2018,Fares and ticketing,437
@@ -24,7 +24,7 @@ Year,Public Transport Complaints,Total
 2018,Punctuality,3088
 2018,Service access/processes/procedures,65
 2018,Service changes and service quality,6267
-2018,Service quality/delivery,411
+2018,Service delivery,411
 2018,Taxi and small passenger vehicle services,269
 2019,Behaviour of staff,198
 2019,Fares and ticketing,298
@@ -33,7 +33,7 @@ Year,Public Transport Complaints,Total
 2019,Punctuality,3656
 2019,Service access/processes/procedures,88
 2019,Service changes and service quality,6375
-2019,Service quality/delivery,697
+2019,Service delivery,697
 2019,Taxi and small passenger vehicle services,227
 2020,Behaviour of staff,503
 2020,Fares and ticketing,203
@@ -42,7 +42,7 @@ Year,Public Transport Complaints,Total
 2020,Punctuality,4328
 2020,Service access/processes/procedures,119
 2020,Service changes and service quality,6486
-2020,Service quality/delivery,1183
+2020,Service delivery,1183
 2020,Taxi and small passenger vehicle services,192
 2021,Behaviour of staff,1280
 2021,Fares and ticketing,139
@@ -51,7 +51,7 @@ Year,Public Transport Complaints,Total
 2021,Punctuality,5125
 2021,Service access/processes/procedures,162
 2021,Service changes and service quality,6599
-2021,Service quality/delivery,2008
+2021,Service delivery,2008
 2021,Taxi and small passenger vehicle services,163
 2022,Behaviour of staff,3255
 2022,Fares and ticketing,95
@@ -60,7 +60,7 @@ Year,Public Transport Complaints,Total
 2022,Punctuality,6068
 2022,Service access/processes/procedures,220
 2022,Service changes and service quality,6713
-2022,Service quality/delivery,3408
+2022,Service delivery,3408
 2022,Taxi and small passenger vehicle services,138
 2023,Behaviour of staff,8273
 2023,Fares and ticketing,65
@@ -69,5 +69,5 @@ Year,Public Transport Complaints,Total
 2023,Punctuality,7184
 2023,Service access/processes/procedures,299
 2023,Service changes and service quality,6830
-2023,Service quality/delivery,5783
+2023,Service delivery,5783
 2023,Taxi and small passenger vehicle services,117
