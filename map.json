@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Public Transport Facilities by Short Platform Availability",
+  "width": 600,
+  "height": 550,
+  "background": "#b3e5fc",
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 1200,
+      "bind": {
+        "input": "range",
+        "min": 600,
+        "max": 4000,
+        "step": 50,
+        "name": "Zoom Level: "
+      }
+    },
+    {
+      "name": "center_to",
+      "value": [145, -30],
+      "bind": {
+        "input": "select",
+        "options": [
+          [145, -30],
+          [150.4656, -33.1267],
+          [144.4915, -34.7850]
+        ],
+        "labels": ["Eastern Australia","New South Wales", "Victoria"],
+        "name": "Select Region: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "mercator",
+    "scale": {"expr": "zoom_level"},
+    "center": {"expr": "center_to"}
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#d3d3d3",
+        "stroke": "darkgray",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {"graticule": {"step": [30, 30]}},
+      "mark": {"type": "geoshape", "stroke": "darkgray", "strokeWidth": 0.5}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/locationfacilitydata.csv"
+      },
+      "transform": [
+        {
+          "calculate": "datum.SHORT_PLATFORM === 'TRUE' ? 'Available' : 'Not Available'",
+          "as": "ShortPlatformCategory"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "tooltip": true
+      },
+      "encoding": {
+        "longitude": {"field": "LONGITUDE", "type": "quantitative"},
+        "latitude": {"field": "LATITUDE", "type": "quantitative"},
+        "size": {
+          "field": "ShortPlatformCategory",
+          "type": "nominal",
+          "title": "Size",
+          "scale": {"range": [40, 100]}
+        },
+        "color": {
+          "field": "ShortPlatformCategory",
+          "type": "nominal",
+          "title": "Short Platform",
+          "scale": {
+            "domain": ["Available", "Not Available"],
+            "range": ["#1f77b4", "#ff7f0e"]
+          }
+        },
+        "tooltip": [
+          {"field": "LOCATION_NAME", "type": "nominal", "title": "Location"},
+          {"field": "TRANSPORT_MODE", "type": "nominal", "title": "Transport Mode"},
+          {"field": "ADDRESS", "type": "nominal", "title": "Address"},
+          {"field": "ShortPlatformCategory", "type": "nominal", "title": "Short Platform Availability"}
+        ]
+      }
+    }
+  ]
+}

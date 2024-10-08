@@ -100,7 +100,12 @@
             </div>
         </div>
 
-                <!-- Attribution and Links Container -->
+        <!-- Container for Flow Map Visualization -->
+        <div id="flowmap-container" style="width:90%; max-width:1200px; margin-bottom: 50px;">
+            <div id="vis4"></div>
+        </div>
+
+        <!-- Attribution and Links Container -->
         <div id="attribution-container">
             <p>Visualization created by Sum Yin Aw</p>
             <p>Data sources:</p>
@@ -120,6 +125,9 @@
 
         // Load the third visualization (Area Chart)
         vegaEmbed("#vis3", "json/areachart.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+
+        // Load the Flow Map visualization
+        vegaEmbed("#vis4", "json/flowmap.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
     </script>
 </body>
 </html>
