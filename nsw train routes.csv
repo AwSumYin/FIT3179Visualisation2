@@ -1,0 +1,31 @@
+route_long_name,start_lat,start_lon,end_lat,end_lon,route_length,trip_headsign
+Central - Newcastle,-33.882,151.207,-32.926,151.779,160,Newcastle
+Central - Wollongong,-33.882,151.207,-34.424,150.891,85,Wollongong
+Central - Blue Mountains,-33.882,151.207,-33.703,150.257,100,Blue Mountains
+Central - Gosford,-33.882,151.207,-33.432,151.343,75,Gosford
+Central - Hornsby,-33.882,151.207,-33.704,151.106,40,Hornsby
+Central - Campbelltown,-33.882,151.207,-34.066,150.813,50,Campbelltown
+Central - Penrith,-33.882,151.207,-33.751,150.695,58,Penrith
+Central - Richmond,-33.882,151.207,-33.597,150.753,60,Richmond
+Parramatta - Chatswood,-33.818,151.003,-33.785,151.182,35,Chatswood
+Liverpool - Parramatta,-33.908,150.924,-33.908,150.924,22,Parramatta
+Bankstown - Sydenham,-33.916,151.037,-33.916,151.037,28,Sydenham
+Redfern - Bondi Junction,-33.891,151.266,-33.891,151.266,7,Bondi Junction
+Central - Cronulla,-33.882,151.207,-34.036,151.175,38,Cronulla
+Central - Helensburgh,-33.882,151.207,-34.153,150.977,43,Helensburgh
+Central - Sutherland,-33.882,151.207,-34.034,151.058,35,Sutherland
+Hornsby - North Sydney,-33.709,151.106,-33.837,151.096,30,North Sydney
+Berowra - Woy Woy,-33.624,151.204,-33.433,151.229,48,Woy Woy
+Wollongong - Thirroul,-34.424,150.891,-34.364,150.788,55,Thirroul
+Newcastle - Maitland,-32.926,151.779,-32.735,151.617,62,Maitland
+Newcastle - Scone,-32.926,151.779,-32.048,151.633,93,Scone
+Blacktown - Springwood,-33.766,150.694,-33.7,150.542,45,Springwood
+Blacktown - Mt Victoria,-33.766,150.694,-33.589,150.259,67,Mt Victoria
+Katoomba - Lithgow,-33.709,150.257,-33.483,150.141,51,Lithgow
+Central - Glenfield,-33.882,151.207,-34.042,151.007,42,Glenfield
+Glenfield - Leppington,-33.968,150.924,-34.051,150.898,26,Leppington
+Campbelltown - Macarthur,-34.073,150.812,-34.062,150.821,15,Macarthur
+Strathfield - Epping,-33.873,151.081,-33.731,151.082,18,Epping
+Epping - Chatswood,-33.776,151.206,-33.707,151.206,25,Chatswood
+Wynyard - Town Hall,-33.867,151.206,-33.867,151.21,4,Town Hall
+Circular Quay - Martin Place,-33.863,151.211,-33.866,151.212,3,Martin Place

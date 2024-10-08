@@ -1,0 +1,31 @@
+route_long_name,start_lat,start_lon,end_lat,end_lon,route_length,trip_headsign
+Southern Cross - Geelong,-37.818,144.956,-38.149,144.357,80,Geelong
+Southern Cross - Ballarat,-37.818,144.956,-37.562,143.85,115,Ballarat
+Southern Cross - Bendigo,-37.818,144.956,-36.757,144.28,153,Bendigo
+Southern Cross - Traralgon,-37.818,144.956,-38.196,146.537,157,Traralgon
+Southern Cross - Seymour,-37.818,144.956,-36.024,145.14,98,Seymour
+Southern Cross - Warrnambool,-37.818,144.956,-38.383,142.483,267,Warrnambool
+Southern Cross - Shepparton,-37.818,144.956,-36.378,145.4,179,Shepparton
+Southern Cross - Albury,-37.818,144.956,-36.076,146.917,310,Albury
+Melbourne - Frankston,-37.814,144.963,-38.158,145.117,42,Frankston
+Melbourne - Sandringham,-37.814,144.963,-37.922,145.006,19,Sandringham
+Melbourne - Pakenham,-37.814,144.963,-38.068,145.488,61,Pakenham
+Melbourne - Cranbourne,-37.814,144.963,-38.097,145.292,45,Cranbourne
+Melbourne - Lilydale,-37.814,144.963,-37.755,145.356,35,Lilydale
+Melbourne - Belgrave,-37.814,144.963,-37.907,145.352,37,Belgrave
+Melbourne - Hurstbridge,-37.814,144.963,-37.654,145.135,25,Hurstbridge
+Melbourne - South Morang,-37.814,144.963,-37.65,145.086,22,South Morang
+Melbourne - Werribee,-37.814,144.963,-37.906,144.672,39,Werribee
+Melbourne - Williamstown,-37.814,144.963,-37.856,144.904,22,Williamstown
+Melbourne - Sunbury,-37.814,144.963,-37.645,144.819,33,Sunbury
+Melbourne - Upfield,-37.814,144.963,-37.708,144.929,29,Upfield
+Melbourne - Craigieburn,-37.814,144.963,-37.683,144.925,35,Craigieburn
+Melbourne - Sydenham,-37.814,144.963,-37.687,144.725,32,Sydenham
+Melbourne - Melton,-37.814,144.963,-37.672,144.624,37,Melton
+Melbourne - Bacchus Marsh,-37.814,144.963,-37.861,144.678,38,Bacchus Marsh
+Melbourne - Wyndham Vale,-37.814,144.963,-38.258,144.219,45,Wyndham Vale
+Melbourne - Waurn Ponds,-37.814,144.963,-38.049,144.406,60,Waurn Ponds
+Melbourne - Avalon,-37.814,144.963,-37.489,144.66,55,Avalon
+Melbourne - Gisborne,-37.814,144.963,-37.511,144.713,50,Gisborne
+Melbourne - Riddells Creek,-37.814,144.963,-37.254,144.441,47,Riddells Creek
+Melbourne - Kyneton,-37.814,144.963,-37.251,144.447,52,Kyneton
