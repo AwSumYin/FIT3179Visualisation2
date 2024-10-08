@@ -34,6 +34,11 @@
                     This visualization allows users to explore the locations and their respective transport modes. The story behind these facilities is important for understanding 
                     accessibility improvements and the regional spread of services.
                 </p>
+                <h2>Insights</h2>
+                <p>
+                    The public transport map provides insights into the availability of short platform facilities across different regions in Eastern Australia. 
+                    The color-coded markers show where these facilities are present, helping to identify areas with better accessibility.
+                </p>
             </div>
         </div>
 
@@ -64,29 +69,45 @@
             <div id="vis2"></div>
         </div>
 
-        <!-- Container for Line Chart Visualization and Storytelling -->
+        <!-- Container for Area Chart Visualization and Storytelling -->
         <div id="vis3-container">
-            <!-- Line Chart Visualization -->
+            <!-- Updated Area Chart Visualization (aligned to the left) -->
             <div id="vis3"></div>
 
-            <!-- Wrapper for two storytelling sections side by side below the line chart -->
-            <div id="linechart-story-wrapper">
-                <!-- Storytelling Section 1 (Left) -->
-                <div class="linechart-story-part" id="linechart-story-left">
-                    <h2>Line Chart Insights</h2>
+            <!-- Container for the storytelling sections on the right -->
+            <div id="areachart-story-container">
+                <!-- Storytelling section 1 (top) -->
+                <div id="areachart-story">
+                    <h2>Insights</h2>
                     <p>
-                        This section provides an analysis of the observed trends in public transport complaints over the years. It focuses on identifying key growth patterns, areas of concern, and changes in customer feedback that could inform improvements in service.
+                        This section analyzes the trends in public transport complaints over the years, focusing on identifying key growth patterns and areas where concerns are 
+                        concentrated. By looking at fluctuations in complaint numbers, we can determine the specific issues causing dissatisfaction, such as delays, overcrowding, 
+                        or inadequate services. Understanding these patterns helps highlight where improvements in service, communication, or infrastructure might be needed to 
+                        address customer concerns and enhance overall service quality.
                     </p>
                 </div>
-
-                <!-- Storytelling Section 2 (Right) -->
-                <div class="linechart-story-part" id="linechart-story-right">
-                    <h2>Line Chart Insights</h2>
+                
+                <!-- Storytelling section 2 (bottom) -->
+                <div id="areachart-story-bottom">
+                    <h2>Future Directions</h2>
                     <p>
-                        The second section examines how external events, policy changes, and service quality improvements influenced customer complaints. It also highlights specific years with significant variances, explaining possible reasons behind these changes.
+                        This section examines the potential future of public transport services by using historical complaint data to anticipate emerging trends. The analysis 
+                        highlights which areas of public transport are likely to need further attention, such as infrastructure upgrades or service expansions. By addressing 
+                        recurring issues, policymakers and service providers can plan targeted strategies for improvement. This approach aims to ensure the sustainable development 
+                        of public transport services, with a focus on better user experience and operational efficiency in the long term.
                     </p>
                 </div>
             </div>
+        </div>
+
+                <!-- Attribution and Links Container -->
+        <div id="attribution-container">
+            <p>Visualization created by Sum Yin Aw</p>
+            <p>Data sources:</p>
+            <ul>
+                <li><a href="https://data.gov.au/dataset/ds-nsw-e855f983-bdb4-4113-ad97-7f56764e6ebd/details?q=public%20transport" target="_blank">Public Transport - Location Facilities and Operators</a></li>
+                <li><a href="https://data.gov.au/dataset/ds-sa-6619f06c-432e-40b1-8e16-fe22e8c15860/details?q=public%20transport" target="_blank">Public complaints received by the Department of Infrastructure and Transport</a></li>
+            </ul>
         </div>
     </div>
 
@@ -97,8 +118,8 @@
         // Load the second visualization (Bar Chart)
         vegaEmbed("#vis2", "json/barchart.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
 
-        // Load the third visualization (Line Chart)
-        vegaEmbed("#vis3", "json/linechart.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+        // Load the third visualization (Area Chart)
+        vegaEmbed("#vis3", "json/areachart.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
     </script>
 </body>
 </html>
