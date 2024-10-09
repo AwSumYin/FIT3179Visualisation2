@@ -1,0 +1,179 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Bus Routes",
+    "width": 400,
+    "height": 550,
+    "background": "#b3e5fc",
+    "params": [
+      {
+        "name": "zoom_level",
+        "value": 25000,
+        "bind": {
+          "input": "range",
+          "min": 600,
+          "max": 35000,
+          "step": 50,
+          "name": "Zoom Level: "
+        }
+      },
+      {
+        "name": "center_to",
+        "value": [145, -38],
+        "bind": {
+          "input": "select",
+          "options": [
+            [145, -38],
+            [150.8656, -34.001]
+          ],
+          "labels": ["Victoria", "New South Wales"],
+          "name": "Select Region: "
+        }
+      }
+    ],
+    "projection": {
+      "type": "mercator",
+      "scale": {"expr": "zoom_level"},
+      "center": {"expr": "center_to"}
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/ne_110m.json",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "#d3d3d3",
+          "stroke": "darkgray",
+          "strokeWidth": 1
+        }
+      },
+      {
+        "data": {"graticule": {"step": [30, 30]}},
+        "mark": {"type": "geoshape", "stroke": "darkgray", "strokeWidth": 0.5}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/vic%20bus%20routes.csv",
+          "format": {"type": "csv"}
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "line",
+              "strokeWidth": 2,
+              "opacity": 0.6
+            },
+            "encoding": {
+              "longitude": {"field": "start_lon", "type": "quantitative"},
+              "latitude": {"field": "start_lat", "type": "quantitative"},
+              "longitude2": {"field": "end_lon"},
+              "latitude2": {"field": "end_lat"},
+              "color": {
+                "field": "route_length",
+                "type": "quantitative",
+                "scale": {"scheme": "blues"},
+                "legend": {"title": "Route Length (km)"}
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "point",
+              "color": "red",
+              "size": 80,
+              "filled": true
+            },
+            "encoding": {
+              "longitude": {"field": "start_lon", "type": "quantitative"},
+              "latitude": {"field": "start_lat", "type": "quantitative"},
+              "tooltip": [
+                {"field": "route_long_name"},
+                {"field": "trip_headsign"},
+                {"field": "route_length"}
+              ]
+            }
+          },
+          {
+            "mark": {
+              "type": "point",
+              "color": "blue",
+              "size": 80,
+              "filled": true
+            },
+            "encoding": {
+              "longitude": {"field": "end_lon", "type": "quantitative"},
+              "latitude": {"field": "end_lat", "type": "quantitative"},
+              "tooltip": [
+                {"field": "route_long_name"},
+                {"field": "trip_headsign"},
+                {"field": "route_length"}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/nsw%20bus%20routes.csv",
+          "format": {"type": "csv"}
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "line",
+              "strokeWidth": 2,
+              "opacity": 0.6
+            },
+            "encoding": {
+              "longitude": {"field": "start_lon", "type": "quantitative"},
+              "latitude": {"field": "start_lat", "type": "quantitative"},
+              "longitude2": {"field": "end_lon"},
+              "latitude2": {"field": "end_lat"},
+              "color": {
+                "field": "route_length",
+                "type": "quantitative",
+                "scale": {"scheme": "greens"},
+                "legend": {"title": "Route Length (km)"}
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "point",
+              "color": "purple",
+              "size": 80,
+              "filled": true
+            },
+            "encoding": {
+              "longitude": {"field": "start_lon", "type": "quantitative"},
+              "latitude": {"field": "start_lat", "type": "quantitative"},
+              "tooltip": [
+                {"field": "route_long_name"},
+                {"field": "trip_headsign"},
+                {"field": "route_length"}
+              ]
+            }
+          },
+          {
+            "mark": {
+              "type": "point",
+              "color": "orange",
+              "size": 80,
+              "filled": true
+            },
+            "encoding": {
+              "longitude": {"field": "end_lon", "type": "quantitative"},
+              "latitude": {"field": "end_lat", "type": "quantitative"},
+              "tooltip": [
+                {"field": "route_long_name"},
+                {"field": "trip_headsign"},
+                {"field": "route_length"}
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

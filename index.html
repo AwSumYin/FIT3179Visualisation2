@@ -13,10 +13,16 @@
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
+<section> 
+    <h1>Public Transports in Eastern Australia</h1>
+
+</section>
+
 <body>
     <!-- Wrapper for all content to ensure proper scrolling -->
     <div id="content-wrapper">
-        <h1>Public Transports in Eastern Australia</h1>
+        <!-- <h1>Public Transports in Eastern Australia</h1> -->
 
         <!-- Container for Map Visualization and Storytelling -->
         <div id="map-container">
@@ -100,10 +106,44 @@
             </div>
         </div>
 
-        <!-- Container for Flow Map Visualization -->
-        <div id="flowmap-container" style="width:90%; max-width:1200px; margin-bottom: 50px;">
-            <div id="vis4"></div>
-        </div>
+                <!-- Container for Flow Maps and Storytelling -->
+        <div id="flowmap-container">
+            <!-- Row 1: Bus Flow Map on the right, Story on the left -->
+            <div class="flowmap-row reverse-layout">
+                <div class="flowmap-story">
+                    <h3>Bus Flow Map Storytelling</h3>
+                    <p>
+                        The bus routes shown on this flow map provide an overview of the major public bus transport routes.
+                    </p>
+                </div>
+                <div id="vis4"></div>
+            </div>
+
+            <!-- Row 2: Tram Flow Map on the left, Story on the right -->
+            <div class="flowmap-row">
+                <div id="vis6"></div>
+                <div class="flowmap-story">
+                    <h3>Tram Flow Map Storytelling</h3>
+                    <p>
+                        This flow map shows the tram routes in Eastern Australia, highlighting key routes for transportation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Row 3: Train Flow Map on the right, Story on the left -->
+            <div class="flowmap-row reverse-layout">
+                <div class="flowmap-story">
+                    <h3>Train Flow Map Storytelling</h3>
+                    <p>
+                        This flow map illustrates the train routes across Victoria and New South Wales, covering the major railway networks.
+                    </p>
+                </div>
+                <div id="vis5"></div>
+            </div>
+</div>
+
+
+        
 
         <!-- Attribution and Links Container -->
         <div id="attribution-container">
@@ -127,7 +167,13 @@
         vegaEmbed("#vis3", "json/areachart.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
 
         // Load the Flow Map visualization
-        vegaEmbed("#vis4", "json/flowmap.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+        vegaEmbed("#vis4", "json/busflowmap.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+
+        // Load the Flow Map visualization
+        vegaEmbed("#vis5", "json/trainflowmap.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
+
+        // Load the Flow Map visualization
+        vegaEmbed("#vis6", "json/tramflowmap.json", {mode: "vega-lite"}).then(console.log).catch(console.warn);
     </script>
 </body>
 </html>
