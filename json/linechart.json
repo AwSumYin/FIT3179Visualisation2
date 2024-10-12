@@ -1,38 +1,100 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900,
+  "height": 500,
+  "title": "Monthly Public Transport Patronage for Regional Modes",
   "data": {
-    "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/(2015-2018)%20complain%20report.csv",
-    "format": {
-      "type": "csv"
+    "url": "https://raw.githubusercontent.com/AwSumYin/FIT3179Visualisation2/refs/heads/main/Monthly%20public%20transport%20patronage%20by%20mode_21082024.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2018,
+      "bind": {
+        "input": "select",
+        "options": [2018, 2019, 2020],
+        "labels": ["2018", "2019", "2020"],
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "Transport_mode_selection",
+      "value": "Metropolitan train",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Metropolitan train",
+          "Metropolitan tram",
+          "Metropolitan bus",
+          "Regional train",
+          "Regional coach",
+          "Regional bus"
+        ],
+        "labels": [
+          "Train",
+          "Tram",
+          "Bus",
+          "Regional Train",
+          "Regional Coach",
+          "Regional Bus"
+        ],
+        "name": "Transport Mode: "
+      }
     }
-  },
-  "mark": {
-    "type": "line",
-    "point": true
-  },
-  "encoding": {
-    "x": {
-      "field": "Year",
-      "type": "ordinal",
-      "axis": {"title": "Year"}
+  ],
+  "transform": [
+    {"filter": "datum.Year == Year_selection"},
+    {
+      "calculate": "datum[Transport_mode_selection]",
+      "as": "Patronage"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "line", "point": true, "interpolate": "monotone"},
+      "encoding": {
+        "x": {
+          "field": "Month name",
+          "type": "ordinal",
+          "sort": [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ],
+          "title": "Month"
+        },
+        "y": {
+          "field": "Patronage",
+          "type": "quantitative",
+          "title": "Patronage Count"
+        },
+        "color": {
+          "field": "Year",
+          "type": "ordinal",
+          "scale": {"scheme": "category10"},
+          "legend": null  
+        },
+        "tooltip": [
+          {"field": "Month name", "type": "nominal", "title": "Month"},
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "Patronage", "type": "quantitative", "title": "Patronage"}
+        ]
+      }
     },
-    "y": {
-      "field": "Total",
-      "type": "quantitative",
-      "axis": {"title": "Number of Complaints"}
-    },
-    "color": {
-      "field": "Public Transport Complaints",
-      "type": "nominal",
-      "legend": {"title": "Complaint Categories"}
-    },
-    "tooltip": [
-      {"field": "Year", "type": "ordinal", "title": "Year"},
-      {"field": "Public Transport Complaints", "type": "nominal", "title": "Complaint Category"},
-      {"field": "Total", "type": "quantitative", "title": "Number of Complaints"}
-    ]
-  },
-  "width": "container",
-  "height": 400,
-  "title": "Trends in Public Transport Complaints by Categories (2016-2018)"
+    {
+      "mark": {"type": "text", "align": "center", "dy": -10},
+      "encoding": {
+        "x": {
+          "field": "Month name",
+          "type": "ordinal",
+          "sort": [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+          ]
+        },
+        "y": {"field": "Patronage", "type": "quantitative"},
+        "text": {"field": "Patronage", "type": "quantitative"}
+      }
+    }
+  ]
 }

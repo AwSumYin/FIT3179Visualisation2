@@ -16,10 +16,17 @@ body, html {
     
 }
 
-section {
-    background-color: #F0F8FF;
+/* Make the section a container with reduced height for the title */
+#container {
+    width: 82%;           /* Keep the width as is */
+    margin: 0 auto;        /* Center the container */
+    padding: -6px;     /* Reduce top/bottom padding to reduce height */
+    background-color: #F0F8FF; /* Keep the same background as others */
+    border-radius: 8px;    /* Same rounded corners as other containers */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Similar box shadow */
+    border: 5px solid #FF69B4; /* Pink border to match other containers */
+    text-align: center;    /* Center the title text */
 }
-
 
 /* Wrapper for centering content */
 #content-wrapper {
@@ -31,16 +38,29 @@ section {
     padding: 20px;
 }
 
+#h1-container {
+    display: flex;  /* Display as flex for side-by-side layout */
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid #FF69B4; /* Adding a pink border */
+    padding: -10px;
+}
+
 /* Header Styles */
 h1 {
     text-align: center;
     margin: 20px 0;
     color: #333;
     padding: 20px;
-    border: 3px solid #FF69B4; /* Adding a pink border */
+    font-size: 30px;
+    font-family: 'Sixtyfour Convergence', sans-serif;
 }
-
-
 
 
 /* Container for Map Visualization and Storytelling */
@@ -61,34 +81,42 @@ h1 {
     padding: 20px;
 }
 
-/* Styles for the story section for map */
+
+/* Reduce the top padding or margin of the story section */
 #story {
     flex: 1;
-    padding: 30px;
+    padding: 1px 30px 30px 30px; /* Reduce top padding */
+    margin-top: 0; /* Ensure there's no extra margin at the top */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #F8F8FF;
+    justify-content: flex-start; /* Ensure text starts at the top */
+    background-color: #FFF;
     border-radius: 8px;
     text-align: justify;
+    
 }
 
-/* Container for Bar Chart Visualization and Storytelling */
-#vis2-container {
-    width: 90%;
-    max-width: 1200px;
-    margin-bottom: 50px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+/* Styles for vis2 (line Chart Visualization) */
+#vis2 {
+    width: 100%;
+    max-width: 900px; /* Add a max-width to control the size of the chart */
+    margin: 0 auto; /* Center the chart horizontally */
     padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
+
+/* Styles for centering dropdowns below the chart */
+#vis2-container select {
+    display: block;
+    margin: 5px auto; /* Centers the select elements */
+}
+
 
 /* Wrapper for two storytelling sections side by side */
-#barchart-story-wrapper {
+#linechart-story-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -96,8 +124,8 @@ h1 {
     gap: 20px; /* Adds a small gap between the two sections */
 }
 
-/* Styles for each part of bar chart storytelling (Left and Right) */
-.barchart-story-part {
+/* Styles for each part of line chart storytelling (Left and Right) */
+.linechart-story-part {
     width: 50%;
     background-color: #F0F8FF;
     border-radius: 8px;
@@ -108,12 +136,12 @@ h1 {
 
 
 /* Centering h2 in the storytelling parts */
-.barchart-story-part h2 {
+.linechart-story-part h2 {
     text-align: center;
     margin-top: 0;
 }
 
-/* Styles for vis2 (Bar Chart Visualization) */
+/* Styles for vis2 (line Chart Visualization) */
 #vis2 {
     width: 100%;
     padding: 20px;
@@ -182,7 +210,7 @@ h1 {
     border: 3px solid #FF69B4; /* Adding a pink border */
 }
 
-/* Container for Bar Chart Visualization and Storytelling */
+/* Container for line Chart Visualization and Storytelling */
 #vis2-container {
     width: 90%;
     max-width: 1200px;
@@ -243,7 +271,6 @@ h1 {
 
 
 
-
 /* Attribution and Links Container */
 #attribution-container {
     width: 100%;
@@ -267,51 +294,16 @@ h1 {
 
 /* Style for the list items */
 #attribution-container li {
-    margin: 5px 0;
+    margin: 5px;
 }
 
 /* Style for the links */
 #attribution-container a {
     color: #FF69B4;
-    text-decoration: none;
+    text-decoration: none; /* make lines go away */
 }
 
 #attribution-container a:hover {
     text-decoration: underline;
 }
 
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    #map-container, #vis2-container, #vis3-container {
-        flex-direction: column;
-    }
-
-    #vis1, #story, #vis2, #vis3, #barchart-story-wrapper {
-        width: 100%;
-        padding: 10px;
-    }
-
-    #barchart-story-wrapper {
-        flex-direction: column;
-    }
-
-    .barchart-story-part {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-        margin: 15px 0;
-    }
-
-    /* Adjust the storytelling sections for smaller screens */
-    #areachart-story-container {
-        flex-direction: column;
-    }
-
-    #areachart-story, #areachart-story-bottom {
-        width: 100%;
-    }
-}
