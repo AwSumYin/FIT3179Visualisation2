@@ -13,8 +13,8 @@ body, html {
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
-    
 }
+
 
 /* Make the section a container with reduced height for the title */
 #container {
@@ -39,28 +39,28 @@ body, html {
 }
 
 #h1-container {
-    display: flex;  /* Display as flex for side-by-side layout */
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
+    display: flex;  
+    justify-content: center; /* Horizontally center the h1 */
+    align-items: center; /* Vertically center the h1 */
+    width: 100%;  /* Set full width for the container */
     max-width: 1200px;
     margin-bottom: 50px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: 5px solid #FF69B4; /* Adding a pink border */
-    padding: -10px;
+    border: 5px solid #FF69B4;
+    padding: 20px;
+    text-align: center;
 }
 
 /* Header Styles */
 h1 {
-    text-align: center;
-    margin: 20px 0;
     color: #333;
-    padding: 20px;
     font-size: 30px;
-    font-family: 'Sixtyfour Convergence', sans-serif;
+    font-family: "Sixtyfour Convergence", sans-serif;
+    margin: 0;  /* Remove default margins */
 }
+
 
 
 /* Container for Map Visualization and Storytelling */
@@ -229,38 +229,62 @@ h1 {
 #flowmap-container {
     width: 90%;
     max-width: 1200px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;  /* Reduce the gap between flowmap sections */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border: 3px solid #FF69B4; /* Pink border for consistency */
+    padding: 15px;  /* Reduce padding inside the container */
+    border: 3px solid #FF69B4;
 }
 
 /* Individual rows for each flowmap and its story */
 .flowmap-row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 30px; /* Adds space between rows */
+    align-items: center;
+    gap: 15px;  /* Reduce the gap between the map and story */
+    margin-bottom: 20px;  /* Reduce space between flowmap rows */
 }
 
-/* Flowmap visualization styles (vis4, vis5, vis6) */
+/* Flowmap storytelling section */
+.flowmap-story {
+    flex: 1;
+    padding: 10px;  /* Reduce padding inside the story */
+    background-color: #F8F8FF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+/* Flowmap visualization (vis4, vis5, vis6) */
 #vis4, #vis5, #vis6 {
-    width: 60%; /* Flowmap takes up 60% of the row */
-    padding: 20px;
+    flex: 1;
+    padding: 10px;  /* Reduce padding around the flowmap */
     background-color: #FFF;
     border-radius: 8px;
+    min-width: 50%;
 }
+
+/* Reduce the space between the storytelling image and text */
+.story-image {
+    width: 50%; 
+    max-width: 500px;
+    margin: 0 auto 15px auto;  /* Center the image horizontally */
+    display: block;
+}
+
+
+
 
 /* Storytelling section next to each flowmap */
 .flowmap-story {
-    width: 35%; /* Story section takes up 35% of the row */
+    flex: 1; /* Ensure story sections take up available space */
     padding: 20px;
     background-color: #F8F8FF;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: justify;
+    min-width: 35%; /* Set a minimum width for stories */
 }
 
 /* Styling for h3 inside the storytelling sections */
@@ -268,6 +292,24 @@ h1 {
     text-align: center;
     margin-top: 0;
 }
+
+.reverse-layout {
+    flex-direction: row-reverse; /* Reverses the layout for alternate rows */
+}
+
+
+/* Media query for responsive layout on smaller screens */
+@media screen and (max-width: 768px) {
+    .flowmap-row {
+        flex-direction: column; /* Stack map and story vertically on small screens */
+    }
+
+    #vis4, #vis5, #vis6, .flowmap-story {
+        min-width: 100%; /* Make map and story take full width */
+        margin-bottom: 20px;
+    }
+}
+
 
 
 

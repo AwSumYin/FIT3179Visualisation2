@@ -13,8 +13,8 @@
       "value": 2018,
       "bind": {
         "input": "select",
-        "options": [2018, 2019, 2020],
-        "labels": ["2018", "2019", "2020"],
+        "options": [2018, 2019, 2020, 2021, 2022, 2023],
+        "labels": ["2018", "2019", "2020", "2021", "2022", "2023"],
         "name": "Year: "
       }
     },
@@ -72,7 +72,7 @@
           "field": "Year",
           "type": "ordinal",
           "scale": {"scheme": "category10"},
-          "legend": null  
+          "legend": null
         },
         "tooltip": [
           {"field": "Month name", "type": "nominal", "title": "Month"},
@@ -94,6 +94,30 @@
         },
         "y": {"field": "Patronage", "type": "quantitative"},
         "text": {"field": "Patronage", "type": "quantitative"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "Year_selection == 2018"},
+        {"filter": "Transport_mode_selection == 'Metropolitan train'"}
+      ],
+      "mark": {"type": "text", "dy": -10, "dx": 25, "color": "red", "fontSize": 12, "fontWeight": "bold"},
+      "encoding": {
+        "x": {"datum": "January", "type": "ordinal"},
+        "y": {"datum": 16000000, "type": "quantitative"},
+        "text": {"value": "Less people working"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "Year_selection == 2018"},
+        {"filter": "Transport_mode_selection == 'Metropolitan train'"}
+      ],
+      "mark": {"type": "text", "dy": 15, "dx": -25, "color": "red", "fontSize": 12, "fontWeight": "bold"},
+      "encoding": {
+        "x": {"datum": "December", "type": "ordinal"},
+        "y": {"datum": 17000000, "type": "quantitative"},
+        "text": {"value": "Low due to holidays"}
       }
     }
   ]

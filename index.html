@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Protest+Strike&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
 
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -38,10 +38,10 @@
                 <p>
                     Across Australia's public transport network, <strong>short platforms</strong> are key in shaping station capacity. 
                     There are <strong>175 facilities</strong> with short platforms, mostly in <strong>space-constrained areas</strong> that can't accommodate longer trains. 
-                    This impacts <strong>service frequency</strong>, <strong>train capacity</strong>, and overall system efficiency.
+                    This impacts service frequency train capacity, and overall system efficiency.
                 </p>
                 <p>
-                    Short platforms, while needed in some areas, can create bottlenecks in high-demand regions. 
+                    Short platforms, while needed in some areas, can create bottlenecks in <strong>high-demand regions</strong>. 
                     Upgrading them is key to meeting Australia's growing transport needs.
                 </p>
 
@@ -65,19 +65,21 @@
             <div id="linechart-story-wrapper">
                 <!-- Storytelling Section 1 (Left) -->
                 <div class="linechart-story-part" id="linechart-story-left">
-                    <h2>Highest</h2>
+                    <h2>Seasonal Trends and Holiday Impact</h2>
                     <p>
-                        The first part of the story provides an overview of public transport usage trends in Eastern Australia. It highlights the importance of understanding seasonal patterns
-                        and the effect of holidays or external events on ridership.
+                        <strong>January</strong> consistently shows lower public transport patronage across multiple modes, particularly for the <strong>Train</strong>. This trend is likely influenced 
+                        by the <strong>holiday season</strong>, as many people are on vacation or not working during this time. This pattern is also reflected in the <strong>December</strong> numbers, which are 
+                        relatively lower due to the lead-up to the holiday period.
                     </p>
                 </div>
 
                 <!-- Storytelling Section 2 (Right) -->
                 <div class="linechart-story-part" id="linechart-story-right">
-                    <h2>Lowest</h2>
+                    <h2>Post-COVID Recovery </h2>
                     <p>
-                        The second part focuses on yearly comparisons and helps to identify which transport modes are most used in different months, providing insights
-                        on how public preferences and infrastructure changes affect usage patterns over time.
+                        From <strong>2021</strong> to <strong>2023</strong>, there is a noticeable increase in patronage across all transport modes, including the <strong>Train</strong> and <strong>Regional coach</strong>, 
+                        after the sharp decline seen in <strong>2020</strong> during the pandemic lockdowns. For instance, by <strong>July 2023</strong>, the patronage for <strong>Metropolitan train</strong> had risen to <strong>14 million</strong>, 
+                        showing a strong recovery as restrictions eased and people returned to regular commuting.
                     </p>
                 </div>
             </div>
@@ -95,23 +97,34 @@
             <div id="areachart-story-container">
                 <!-- Storytelling section 1 (top) -->
                 <div id="areachart-story">
-                    <h2>Insights</h2>
+                    <h2>Staff Complaints (2023)</h2>
                     <p>
-                        This section analyzes the trends in public transport complaints over the years, focusing on identifying key growth patterns and areas where concerns are 
-                        concentrated. By looking at fluctuations in complaint numbers, we can determine the specific issues causing dissatisfaction, such as delays, overcrowding, 
-                        or inadequate services. Understanding these patterns helps highlight where improvements in service, communication, or infrastructure might be needed to 
-                        address customer concerns and enhance overall service quality.
+                      One major observation from the visualization is the significant spike in complaints about 
+                      <strong>Behaviour of staff</strong> in <strong>2023</strong>. This category saw a steep surge, 
+                      suggesting a rise in tensions between staff and passengers. This could be related to 
+                      increasing commuter frustrations or the challenges of post-pandemic service recovery. 
+                      Addressing <strong>staff training</strong> and improving<strong> passenger interactions</strong> should be 
+                      a <strong>high priority</strong> to improve the overall transport experience.
                     </p>
-                </div>
+                    <p>
+                      The rise may also reflect <strong>higher passenger expectations</strong> post-pandemic. As regular commuting resumes, passengers likely expect better <strong>
+                      professionalism</strong> and <strong>service</strong> from staff. Improving customer service could help reduce future complaints.
+                    </p>
+                  </div>
+                  
                 
                 <!-- Storytelling section 2 (bottom) -->
                 <div id="areachart-story-bottom">
-                    <h2>Future Directions</h2>
+                    <h2>Rise in Punctuality Complaints</h2>
                     <p>
-                        This section examines the potential future of public transport services by using historical complaint data to anticipate emerging trends. The analysis 
-                        highlights which areas of public transport are likely to need further attention, such as infrastructure upgrades or service expansions. By addressing 
-                        recurring issues, policymakers and service providers can plan targeted strategies for improvement. This approach aims to ensure the sustainable development 
-                        of public transport services, with a focus on better user experience and operational efficiency in the long term.
+                        Complaints related to <strong>Punctuality</strong> have seen a gradual rise from 
+                        <strong>2016</strong> to <strong>2023</strong>, indicating persistent issues with delays and unreliable services. 
+                        The steady increase in complaints about punctuality highlights the need for <strong>better scheduling</strong>, 
+                        clearer communication with passengers during delays, and potential infrastructure upgrades
+                        to ensure more <strong>reliable service delivery</strong>.
+                    </p>
+                    <p>                    
+
                     </p>
                 </div>
             </div>
@@ -119,38 +132,51 @@
 
                 <!-- Container for Flow Maps and Storytelling -->
         <div id="flowmap-container">
-            <!-- Row 1: Bus Flow Map on the right, Story on the left -->
-            <div class="flowmap-row reverse-layout">
+            <!-- Row 1: Bus Flow Map on the right, Story on the left (default layout) -->
+            <div class="flowmap-row">
                 <div class="flowmap-story">
                     <h3>Bus Flow Map Storytelling</h3>
-                    <p>
-                        The bus routes shown on this flow map provide an overview of the major public bus transport routes.
-                    </p>
+                    <img src="bus.png" alt="Bus Flow Map" class="story-image">
+                        <p>
+                            The bus routes shown on this flow map provide an overview of the major public bus transport routes across Victoria and New South Wales.
+                            In <strong>Victoria</strong>, the red points represent the starting locations of bus routes, while the blue points indicate the endpoints.
+                            Similarly, in <strong>New South Wales</strong>, the purple points mark the starting locations and the orange points represent the endpoints.
+                            This helps visualize the full span of the routes, showing the connectivity and travel distances between major regions.
+                        </p>
                 </div>
                 <div id="vis4"></div>
             </div>
 
-            <!-- Row 2: Tram Flow Map on the left, Story on the right -->
-            <div class="flowmap-row">
-                <div id="vis6"></div>
+            <!-- Row 2: Tram Flow Map on the left, Story on the right (reverse layout) -->
+            <div class="flowmap-row reverse-layout">
+                <div id="vis6"></div> <!-- This will now appear on the left -->
                 <div class="flowmap-story">
                     <h3>Tram Flow Map Storytelling</h3>
+                    <img src="tram.png" alt="Tram Flow Map" class="story-image">
                     <p>
-                        This flow map shows the tram routes in Eastern Australia, highlighting key routes for transportation.
+                        This flow map shows the tram routes in Eastern Australia, focusing on key areas in <strong>Victoria</strong> and <strong>New South Wales</strong>.
+                        It highlights major starting and ending points for trams across the states. The visualization aids in understanding the structure and span of the 
+                        tram routes across both regions.
                     </p>
                 </div>
             </div>
 
-            <!-- Row 3: Train Flow Map on the right, Story on the left -->
-            <div class="flowmap-row reverse-layout">
+
+            <!-- Row 3: Train Flow Map on the right, Story on the left (default layout) -->
+            <div class="flowmap-row">
                 <div class="flowmap-story">
                     <h3>Train Flow Map Storytelling</h3>
+                    <img src="train.png" alt="Train Flow Map" class="story-image">
                     <p>
-                        This flow map illustrates the train routes across Victoria and New South Wales, covering the major railway networks.
-                    </p>
+                        The train routes across Victoria and New South Wales are depicted with clear start and end points for each route.
+                        In <strong>Victoria</strong>, red marks the starting points of train routes and blue shows the endpoints.
+                        For <strong>New South Wales</strong>, purple represents the starting points, and orange represents the endpoints.
+                        This map effectively demonstrates the network of train routes, illustrating the reach and interconnectivity across these two states.
+                        </p>
                 </div>
                 <div id="vis5"></div>
             </div>
+
 </div>
 
 
