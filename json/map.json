@@ -97,7 +97,10 @@
       "data": {
         "values": [
           {"state": "Victoria", "longitude": 144.9631, "latitude": -37.8136},
-          {"state": "New South Wales", "longitude": 152.4093, "latitude": -33.9888}
+          {"state": "New South Wales", "longitude": 152.4093, "latitude": -33.9888},
+          {"state": "Queensland", "longitude": 153.0251, "latitude": -27.4698},
+          {"state": "South Australia", "longitude": 138.6007, "latitude": -34.9285},
+          {"state": "Northern Territory", "longitude": 130.8456, "latitude": -12.4634}
         ]
       },
       "mark": {

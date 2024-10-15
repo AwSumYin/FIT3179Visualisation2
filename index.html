@@ -131,57 +131,69 @@
         </div>
 
                 <!-- Container for Flow Maps and Storytelling -->
-        <div id="flowmap-container">
-            <!-- Row 1: Bus Flow Map on the right, Story on the left (default layout) -->
-            <div class="flowmap-row">
-                <div class="flowmap-story">
-                    <h3>Bus Flow Map Storytelling</h3>
-                    <img src="bus.png" alt="Bus Flow Map" class="story-image">
-                        <p>
-                            The bus routes shown on this flow map provide an overview of the major public bus transport routes across Victoria and New South Wales.
-                            In <strong>Victoria</strong>, the red points represent the starting locations of bus routes, while the blue points indicate the endpoints.
-                            Similarly, in <strong>New South Wales</strong>, the purple points mark the starting locations and the orange points represent the endpoints.
-                            This helps visualize the full span of the routes, showing the connectivity and travel distances between major regions.
-                        </p>
+                <div id="flowmap-container">
+                    <!-- Row 1: Bus Flow Map on the right, Story on the left (default layout) -->
+                    <div class="flowmap-row">
+                        <div class="flowmap-story">
+                            <h3>Bus Routes Overview</h3>
+                            <img src="bus.png" alt="Bus Flow Map" class="story-image">
+                                <p>
+                                    The bus routes across <strong>Victoria</strong> and <strong>New South Wales</strong> highlight the connectivity and public transport reach within these states. 
+                                    In <strong>Victoria</strong>, the <strong style="color:red;">red</strong> points represent starting locations, and the 
+                                    <strong style="color:blue;">blue</strong> points indicate endpoints, giving a clear understanding of where major routes begin and end. 
+                                    In <strong>New South Wales</strong>, a similar pattern is followed with <strong style="color:purple;">purple</strong> points marking the start 
+                                    and <strong style="color:orange;">orange</strong> marking the end. 
+                                </p>
+                                <p>
+                                    This helps visualize the vast network of bus routes, providing essential connectivity for both urban and regional areas, playing a critical role 
+                                    in commuting, tourism, and inter-city travel. The visualization offers a holistic view of how buses contribute to regional accessibility, 
+                                    connecting remote locations to key urban centers.
+                                </p>
+                        </div>
+                        <div id="vis4"></div>
+                    </div>
+                
+                    <!-- Row 2: Tram Flow Map on the left, Story on the right (reverse layout) -->
+                    <div class="flowmap-row reverse-layout">
+                        <div id="vis6"></div> <!-- This will now appear on the left -->
+                        <div class="flowmap-story">
+                            <h3>Tram Network Insights</h3>
+                            <img src="tram.png" alt="Tram Flow Map" class="story-image">
+                            <p>
+                                The tram network in <strong>Victoria</strong> and <strong>New South Wales</strong> is an essential mode of urban transport, especially in densely populated areas. 
+                                This map shows the key routes in both states, with a focus on major tram lines that serve busy city centers and surrounding suburbs. 
+                                <strong>Victoria</strong>, particularly <strong>Melbourne</strong>, is renowned for having one of the largest tram networks in the world, 
+                                facilitating millions of daily commuters. 
+                            </p>
+                            <p> 
+                                The visualization provides insights into how trams play a role in reducing traffic congestion 
+                                by offering an efficient alternative to buses and cars, while also being a sustainable transport option. 
+                                The key starting and ending points in this map highlight the extent of tram service reach and its impact
+                            </p>
+                        </div>
+                    </div>
+                
+                    <!-- Row 3: Train Flow Map on the right, Story on the left (default layout) -->
+                    <div class="flowmap-row">
+                        <div class="flowmap-story">
+                            <h3>Train Route Connections</h3>
+                            <img src="train.png" alt="Train Flow Map" class="story-image">
+                            <p>
+                                The train routes across <strong>Victoria</strong> and <strong>New South Wales</strong> are depicted with clear start and end points for each route. 
+                                In <strong>Victoria</strong>, <strong style="color:red;">red</strong> marks the starting points of train routes and 
+                                <strong style="color:blue;">blue</strong> shows the endpoints. For <strong>New South Wales</strong>, 
+                                <strong style="color:purple;">purple</strong> represents the starting points, and <strong style="color:orange;">orange</strong> represents the endpoints. 
+                            </p>
+                            <p> 
+                                This map highlights key routes, showing where trams start and end, helping to visualize their impact on urban mobility. 
+                                Trams help reduce congestion by offering a sustainable, efficient alternative to buses and cars in the city.
+                            </p>
+                        </div>
+                        <div id="vis5"></div>
+                    </div>
                 </div>
-                <div id="vis4"></div>
-            </div>
-
-            <!-- Row 2: Tram Flow Map on the left, Story on the right (reverse layout) -->
-            <div class="flowmap-row reverse-layout">
-                <div id="vis6"></div> <!-- This will now appear on the left -->
-                <div class="flowmap-story">
-                    <h3>Tram Flow Map Storytelling</h3>
-                    <img src="tram.png" alt="Tram Flow Map" class="story-image">
-                    <p>
-                        This flow map shows the tram routes in Eastern Australia, focusing on key areas in <strong>Victoria</strong> and <strong>New South Wales</strong>.
-                        It highlights major starting and ending points for trams across the states. The visualization aids in understanding the structure and span of the 
-                        tram routes across both regions.
-                    </p>
-                </div>
-            </div>
-
-
-            <!-- Row 3: Train Flow Map on the right, Story on the left (default layout) -->
-            <div class="flowmap-row">
-                <div class="flowmap-story">
-                    <h3>Train Flow Map Storytelling</h3>
-                    <img src="train.png" alt="Train Flow Map" class="story-image">
-                    <p>
-                        The train routes across Victoria and New South Wales are depicted with clear start and end points for each route.
-                        In <strong>Victoria</strong>, red marks the starting points of train routes and blue shows the endpoints.
-                        For <strong>New South Wales</strong>, purple represents the starting points, and orange represents the endpoints.
-                        This map effectively demonstrates the network of train routes, illustrating the reach and interconnectivity across these two states.
-                        </p>
-                </div>
-                <div id="vis5"></div>
-            </div>
 
 </div>
-
-
-        
-
         <!-- Attribution and Links Container -->
         <div id="attribution-container">
             <p>Visualization created by Sum Yin Aw</p>

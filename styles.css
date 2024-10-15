@@ -237,66 +237,43 @@ h1 {
     border: 3px solid #FF69B4;
 }
 
-/* Individual rows for each flowmap and its story */
+/* Adjust the layout to ensure flowmaps and stories are perfectly aligned */
 .flowmap-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 15px;  /* Reduce the gap between the map and story */
-    margin-bottom: 20px;  /* Reduce space between flowmap rows */
+    align-items: stretch; /* Ensures both elements stretch to the same height */
+    gap: 15px; /* Space between the flowmap and the story */
+    margin-bottom: 20px;
+    height: 100%; /* Ensure the row has flexible height */
 }
 
-/* Flowmap storytelling section */
-.flowmap-story {
-    flex: 1;
-    padding: 10px;  /* Reduce padding inside the story */
+/* Ensure the story and flowmap take up equal or proportional space */
+.flowmap-story, #vis4, #vis5, #vis6 {
+    flex: 1; /* Make both story and flowmap take equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #F8F8FF;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: justify;
+    padding: 20px;
+    min-width: 35%;
+    min-height: 100%; /* Ensure the minimum height matches the parent */
+    box-sizing: border-box; /* Ensure padding is included in height calculations */
 }
 
-/* Flowmap visualization (vis4, vis5, vis6) */
+/* Ensure flowmap visualizations have proportional height */
 #vis4, #vis5, #vis6 {
-    flex: 1;
-    padding: 10px;  /* Reduce padding around the flowmap */
     background-color: #FFF;
     border-radius: 8px;
+    padding: 10px;
     min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the flowmap inside its container */
+    height: 100%; /* Ensure the height matches the parent */
 }
-
-/* Reduce the space between the storytelling image and text */
-.story-image {
-    width: 50%; 
-    max-width: 500px;
-    margin: 0 auto 15px auto;  /* Center the image horizontally */
-    display: block;
-}
-
-
-
-
-/* Storytelling section next to each flowmap */
-.flowmap-story {
-    flex: 1; /* Ensure story sections take up available space */
-    padding: 20px;
-    background-color: #F8F8FF;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    min-width: 35%; /* Set a minimum width for stories */
-}
-
-/* Styling for h3 inside the storytelling sections */
-.flowmap-story h3 {
-    text-align: center;
-    margin-top: 0;
-}
-
-.reverse-layout {
-    flex-direction: row-reverse; /* Reverses the layout for alternate rows */
-}
-
 
 /* Media query for responsive layout on smaller screens */
 @media screen and (max-width: 768px) {
@@ -307,10 +284,18 @@ h1 {
     #vis4, #vis5, #vis6, .flowmap-story {
         min-width: 100%; /* Make map and story take full width */
         margin-bottom: 20px;
+        height: auto; /* Allow height to be flexible on smaller screens */
     }
 }
 
 
+/* Reduce the space between the storytelling image and text */
+.story-image {
+    width: 50%; 
+    max-width: 500px;
+    margin: 0 auto 15px auto;  /* Center the image horizontally */
+    display: block;
+}
 
 
 /* Attribution and Links Container */
@@ -321,7 +306,7 @@ h1 {
     padding: 5px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto; /* Center horizontally and add bottom margin */
     text-align: center;
     font-size: 12px;
     color: #333;
