@@ -263,6 +263,17 @@ h1 {
     box-sizing: border-box; /* Ensure padding is included in height calculations */
 }
 
+/* Styling for h3 inside the storytelling sections */
+.flowmap-story h3 {
+    text-align: center; /* Ensures the text is centered */
+    margin-top: 0; /* Removes any extra top margin */
+    display: flex; /* Flexbox to help center */
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Centers the text vertically */
+    height: 100%; /* Make the h3 take the full height of its container */
+}
+
+
 /* Ensure flowmap visualizations have proportional height */
 #vis4, #vis5, #vis6 {
     background-color: #FFF;
