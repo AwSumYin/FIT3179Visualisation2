@@ -264,7 +264,7 @@ h1 {
 }
 
 /* Styling for h3 inside the storytelling sections */
-.flowmap-story h3 {
+.flowmap-story h2 {
     text-align: center; /* Ensures the text is centered */
     margin-top: 0; /* Removes any extra top margin */
     display: flex; /* Flexbox to help center */
