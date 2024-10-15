@@ -99,8 +99,7 @@
         "longitude": {"field": "start_lon", "type": "quantitative"},
         "latitude": {"field": "start_lat", "type": "quantitative"},
         "tooltip": [
-          {"field": "route_long_name", "type": "nominal", "title": "Tram Route (Victoria)"},
-          {"field": "route_length", "type": "quantitative", "title": "Route Length (km)"}
+          {"field": "name", "type": "nominal", "title": "Tram Route Name"}
         ]
       }
     }
